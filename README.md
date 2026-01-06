@@ -30,7 +30,7 @@ After compiling, run the program with:
 
 ## Usage
 
-    Usage: ./sysinfo [--cpu | --mem | --all | --uptime | --version | --hostname | --help]
+    Usage: ./sysinfo [--cpu | --mem | --all | --uptime | --version | --help]
 
 ### Options
 
@@ -39,7 +39,6 @@ After compiling, run the program with:
 - `--all`      : **Display all available system information**  
 - `--uptime`   : **Display system uptime**  
 - `--version`  : **Display program version**  
-- `--hostname` : **Display system hostname**  
 - `--help`     : **Show this help message**  
 
 ## License

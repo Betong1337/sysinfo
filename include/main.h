@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <pwd.h>
 #include <math.h>
-
-#define USAGE_MSG "Usage: [--cpu | --mem | --all | --uptime | --version | --hostname | --help]\n"
+#define USAGE_MSG "Usage: [--cpu | --mem | --all | --uptime | --version | --help]\n"
 void print_all();
 #endif
