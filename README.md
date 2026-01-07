@@ -12,6 +12,10 @@ The program can display:
 - **Hostname**  
 - **Kernel and OS version**  
 
+## Screenshot
+
+![Sysinfo](https://i.imgur.com/HICBqIT.png)
+
 ## Compilation
 
 The project uses a structure with `src/` for source files and `include/` for headers.
