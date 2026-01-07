@@ -12,8 +12,8 @@ void strip_quotes(char *str) {
     size_t len = strlen(str);
 
     if (len >= 2 && str[0] == '"' && str[len - 1] == '"') {
-        str[len - 1] = '\0';          // ta bort sista "
-        memmove(str, str + 1, len);   // ta bort första "
+        str[len - 1] = '\0'; 
+        memmove(str, str + 1, len);
     }
 }
 
@@ -30,7 +30,7 @@ void print_uptime() {
         while (fgets(line, sizeof(line), uptime_file)) {
             char* uptime_seconds = strtok(line, " ");
             float uptime_hours = (atof(uptime_seconds) / 60) / 60;
-            
+
             printf("\033[1;34m%s\033[0m", "Uptime: ");
             printf("%.2f hours\n", uptime_hours);
             break;
