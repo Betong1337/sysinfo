@@ -15,6 +15,7 @@
 #define UPTIME_PATH      "/proc/uptime"
 
 void print_title();
+void strip_quotes(char *str);
 const char *get_username();
 const char *get_username();
 void print_uptime();
