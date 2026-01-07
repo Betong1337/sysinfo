@@ -6,11 +6,11 @@
 
 The program can display:
 
-- **CPU information and per-core usage**  
+- **CPU information and per-core usage (Actually not yet)**  
 - **Memory (RAM and swap)**  
 - **System uptime**  
 - **Hostname**  
-- **Program version**  
+- **Kernel and OS version**  
 
 ## Compilation
 
