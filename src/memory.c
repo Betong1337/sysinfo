@@ -53,8 +53,26 @@ void print_mem_total() {
 
     float used_mem = total - available;
 
+    char *red = "\033[1;31m";
+    char *green = "\033[32m";
+    char *yellow = "\033[33m";
+    char *reset = "\033[0m";
+
+    char *procent_color;
+
+    float used_percent = (used_mem / total) * 100;
+
+    if (used_percent < 50) {
+        procent_color = green;
+    } else if (used_percent > 49 && used_percent < 80) {
+        procent_color = yellow;
+    } else {
+        procent_color = red;
+    }
+
     printf("\033[1;34m%s\033[0m", "Memory: ");
-    printf("%.2f GB / %s GB\n", used_mem, gb_total);
+    printf("%.2f GB / %.2f GB (%s%.0f%%%s)\n",
+       used_mem, total, procent_color, used_percent, reset);
     free(gb_total);
     free(gb_available);
 }
