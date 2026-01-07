@@ -11,8 +11,12 @@
 
 #define MEMINFO_PATH     "/proc/meminfo"
 
-//Prints PC's total memory
 char* trim_leading_spaces(char *str);
+//Gets memory info from /proc/meminfo
+char* get_memory_info(char *option);
+//Prints used ram ATM and total ram
 void print_mem_total();
+//Prints used swap ATM and total ram
+void print_swap();
 
 #endif
