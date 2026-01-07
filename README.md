@@ -35,7 +35,8 @@ After compiling, run the program with:
 ### Options
 
 - `--cpu`      : **Display CPU information and per-core usage**  
-- `--mem`      : **Display memory (RAM and swap)**  
+- `--mem`      : **Display memory (RAM)**
+- `--swap`     : **Display swap**
 - `--all`      : **Display all available system information**  
 - `--uptime`   : **Display system uptime**  
 - `--version`  : **Display program version**  
