@@ -9,6 +9,7 @@ void print_all() {
     print_kernel_version();
     print_cpu_model();
     print_mem_total();
+    print_swap();
     print_uptime();
 }
 
