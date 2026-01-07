@@ -26,7 +26,7 @@ Or using the Makefile:
 
 After compiling, run the program with:
 
-    ./sysinfo [option]
+    ./sysinfo [option] or ./sysinfo
 
 ## Usage
 
