@@ -23,6 +23,8 @@ int main(int argc, char **argv) {
         print_cpu_model();
     } else if (strcmp(argv[1], "--mem") == 0) {
         print_mem_total();
+    } else if (strcmp(argv[1], "--swap") == 0) {
+        print_swap();
     } else if (strcmp(argv[1], "--all") == 0) {
         print_all();
     } else if (strcmp(argv[1], "--uptime") == 0 || strcmp(argv[1], "--up") == 0) {
