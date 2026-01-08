@@ -1,5 +1,5 @@
 Name:           sysinfo
-Version:        1.0.0
+Version:        1.0.1
 Release:        1%{?dist}
 Summary:        Small Linux system information tool written in C
 
@@ -8,7 +8,6 @@ URL:            https://github.com/Betong1337/sysinfo
 Source0:        %{name}-%{version}.tar.gz
 
 BuildRequires:  gcc, make
-Requires:       
 
 %description
 Sysinfo is a lightweight tool that displays basic system information
@@ -29,5 +28,5 @@ cp sysinfo %{buildroot}/usr/bin/
 /usr/bin/sysinfo
 
 %changelog
-* Thu Jan 08 2026 Ditt Namn asp.jakob@outlook.com - 1.0.0
-- Initial release
+* Thu Jan 08 2026 Ditt Namn asp.jakob@outlook.com - 1.0.1-1
+- Updated spec for COPR, removed empty Requires
