@@ -31,17 +31,23 @@ void print_uptime() {
         return;
     }
 
-    float hours = atof(strtok(line, " ")) / 3600.0;
+    float hours = 23.232;
     fclose(f);
 
+    int mins = (int)((hours - (int)hours) * 60);
+
     if (hours < 24) {
-        printf(UPTIME_MSG1, HEADER, UPTIME_PREFIX, RESET,(int) hours);
+        if (hours < 1) {
+            printf(UPTIME_MSG3, HEADER, UPTIME_PREFIX, RESET, mins);
+            return;
+        }
+        printf(UPTIME_MSG1, HEADER, UPTIME_PREFIX, RESET,(int) hours, mins);
         return;
     }
 
     int days = hours / 24;
     hours -= days * 24;
-    int mins = (int)((hours - (int)hours) * 60);
+
     printf(UPTIME_MSG2, HEADER, UPTIME_PREFIX, RESET, days, (int) hours, mins);
 }
 
