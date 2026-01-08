@@ -54,7 +54,3 @@ This project is open to maintenance, improvements, refactoring, and new features
 The TODO list can be used as inspiration, but it is **not a requirement** to follow it.
 
 Feel free to contribute with any idea or change you think improves the project, regardless of whether it is listed in TODO or not.
-
-## License
-
-This project is **open-source** and free to use.
