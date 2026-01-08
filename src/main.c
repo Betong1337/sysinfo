@@ -5,7 +5,7 @@
 
 void print_all() {
     print_title();
-    print_os_type();
+    print_os_info();
     print_kernel_version();
     print_cpu_model();
     print_mem_total();
@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
     } else if (strcmp(argv[1], "--version" ) == 0 || strcmp(argv[1], "--ver") == 0) {
         print_kernel_version();
     } else if (strcmp(argv[1], "--os") == 0) {
-        print_os_type();
+        print_os_info();
     } else if (strcmp(argv[1], "--help") == 0) {
         printf("%s", USAGE_MSG);
     } else {

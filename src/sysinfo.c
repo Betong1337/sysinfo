@@ -1,11 +1,10 @@
 #include <sysinfo.h>
 
 void print_title() {
-    const char* user = get_username();
-    char* hostname = get_hostname();
-    if (hostname != NULL) {
-         printf("\033[1;34m=== %s@%s ===\033[0m\n", user, hostname);
-    }
+    char *hostname = get_hostname();
+    const char *username = get_username();
+    if (!hostname) return;
+    printf(PRINT_TITLE_MSG, HEADER, username, hostname, RESET);
 }
 
 void strip_quotes(char *str) {
@@ -23,73 +22,87 @@ const char *get_username() {
 }
 
 void print_uptime() {
-    FILE *uptime_file = fopen(UPTIME_PATH, "r");
+    FILE *f = fopen(UPTIME_PATH, "r");
+    if (!f) return;
+
     char line[256];
-
-    if (uptime_file != NULL) {
-        while (fgets(line, sizeof(line), uptime_file)) {
-            char* uptime_seconds = strtok(line, " ");
-            float uptime_hours = (atof(uptime_seconds) / 60) / 60;
-
-            printf("\033[1;34m%s\033[0m", "Uptime: ");
-            printf("%.2f hours\n", uptime_hours);
-            break;
-        }
+    if (!fgets(line, sizeof line, f)) {
+        fclose(f);
+        return;
     }
-    fclose(uptime_file);
+
+    float hours = atof(strtok(line, " ")) / 3600.0;
+    fclose(f);
+
+    if (hours < 24) {
+        printf(UPTIME_MSG1, HEADER, UPTIME_PREFIX, RESET,(int) hours);
+        return;
+    }
+
+    int days = hours / 24;
+    hours -= days * 24;
+    int mins = (int)((hours - (int)hours) * 60);
+    printf(UPTIME_MSG2, HEADER, UPTIME_PREFIX, RESET, days, (int) hours, mins);
 }
 
 void print_kernel_version() {
-    FILE *kernel_ver_file = fopen(KERNEL_PATH,"r");
+    FILE *f = fopen(KERNEL_PATH, "r");
+    if (!f) return;
+
     char line[256];
-    char *kernel_version = fgets(line, sizeof(line), kernel_ver_file);
+    char *kernel_version = fgets(line, sizeof(line), f);
+    if (!kernel_version) {
+        fclose(f);
+        return;
+    }
+
     kernel_version = strtok(kernel_version, "(");
-    printf("\033[1;34m%s\033[0m", "Kernel Version: ");
-    printf("%s\n", kernel_version);
-    fclose(kernel_ver_file);
+    printf(KERNEL_MSG, HEADER, KERNEL_VER_PREFIX, RESET, kernel_version);
+    fclose(f);
 }
 
-void print_os_type() {
-    FILE *os_type_file = fopen(OS_PATH, "r");
+void print_os_info() {
+    FILE *f = fopen(OS_PATH, "r");
+    if (!f) return;
+
     char line[256];
+
     char *key;
     char *value;
     char os_type[64];
     char os_version[64];
 
-    if (os_type_file != NULL) {
-        while (fgets(line, sizeof(line), os_type_file)) {
-            key = strtok(line, "=");    
-            value = strtok(NULL, "=");  
+    while (fgets(line, sizeof(line), f)) {
+        key = strtok(line, "=");    
+        value = strtok(NULL, "=");  
 
-            if (strncmp("NAME", key, 4) == 0) {
-                strcpy(os_type, value);
-            }
-            if (strncmp("VERSION", key, 6) == 0) {
-                strcpy(os_version, value);
-                os_version[strcspn(os_version, "\n")] = '\0';
-                os_type[strcspn(os_type, "\n")] = '\0';
-                strip_quotes(os_version);
-                strip_quotes(os_type);                
-                printf("\033[1;34m%s\033[0m", "OS: ");
-                printf("%s %s\n", os_type, os_version);
-                break;
-            }
+        if (strncmp(OS_NAME_CMP, key, 4) == 0) {
+            strcpy(os_type, value);
         }
-    fclose(os_type_file);
+        if (strncmp(OS_VERSION_CMP, key, 6) == 0) {
+            strcpy(os_version, value);
+            os_version[strcspn(os_version, "\n")] = '\0';
+            os_type[strcspn(os_type, "\n")] = '\0';
+            strip_quotes(os_version);
+            strip_quotes(os_type);              
+            printf(OS_MSG, HEADER, OS_PREFIX, RESET, os_type, os_version);
+            break;
+        }
     }
+    fclose(f);
 }
 
 char* get_hostname() {
+    FILE *f = fopen(HOSTNAME_PATH, "r");
+    if (!f) return NULL;
+
     static char line[256];
-    FILE *hostname_file = fopen(HOSTNAME_PATH, "r");
-    if (hostname_file != NULL) {
-        if (fgets(line, sizeof(line), hostname_file)) {
-            line[strcspn(line, "\n")] = 0;
-            fclose(hostname_file);
-            return line;
-        }
-        fclose(hostname_file);
+
+    if (fgets(line, sizeof(line), f)) {
+        line[strcspn(line, "\n")] = 0;
+        fclose(f);
+        return line;
     }
+    fclose(f);
     return NULL;
 }

@@ -8,6 +8,7 @@
 #include <unistd.h>
 #include <pwd.h>
 #include <math.h>
+#include <defines.h>
 
 #define CPUINFO_PATH     "/proc/cpuinfo"
 
