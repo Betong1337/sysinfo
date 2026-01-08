@@ -6,7 +6,7 @@
 
 The program can display:
 
-- **CPU information and per-core usage (Actually not yet)**  
+- **CPU information**  
 - **Memory (RAM and swap)**  
 - **System uptime**  
 - **Hostname**  
@@ -38,7 +38,7 @@ After compiling, run the program with:
 
 ### Options
 
-- `--cpu`      : **Display CPU information and per-core usage**  
+- `--cpu`      : **Display CPU informatio**  
 - `--mem`      : **Display memory (RAM)**
 - `--swap`     : **Display swap**
 - `--all`      : **Display all available system information**  
