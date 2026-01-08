@@ -14,7 +14,7 @@ The program can display:
 
 ## Screenshot
 
-![Sysinfo](https://i.imgur.com/HICBqIT.png)
+![Sysinfo](https://i.imgur.com/0jlDYYN.png)
 
 ## Compilation
 
