@@ -8,5 +8,18 @@
 #include <pwd.h>
 #include <math.h>
 #define USAGE_MSG "Usage: [--cpu | --mem | --swap | --all | --uptime | --version | --help]\n"
+
+#define CPU_ARGV_CMP "--cpu"
+#define MEM_ARGV_CMP "--mem"
+#define SWAP_ARGV_CMP "--swap"
+#define ALL_ARGV_CMP "--all"
+#define UPTIME_ARGV_CMP1 "--uptime"
+#define UPTIME_ARGV_CMP2 "--up"
+#define SYSINFO_VERSION_ARGV_CMP1 "--version"
+#define SYSINFO_VERSION_ARGV_CMP2 "-v"
+#define OS_ARGV_CMP "--os"
+#define HELP_ARGV_CMP "--help"
+#define KERNEL_VERSION_ARGV_CMP "--kernel-version"
+
 void print_all();
 #endif

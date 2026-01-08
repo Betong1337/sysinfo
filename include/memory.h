@@ -8,9 +8,19 @@
 #include <unistd.h>
 #include <pwd.h>
 #include <math.h>
-#include <defines.h>
+#include <color.h>
 
 #define MEMINFO_PATH     "/proc/meminfo"
+
+#define MEM_PREFIX "Memory: "
+#define MEM_MSG "%s%s%s%.2f GB / %.2f GB (%s%d%%%s)\n"
+#define SWAP_PREFIX "Swap: "
+
+#define MEM_TOTAL_CMP "MemTotal"
+#define MEM_AVAILABLE_CMP "MemAvailable"
+#define SWAP_TOTAL_CMP "SwapTotal"
+#define SWAP_FREE_CMP "SwapFree"
+#define SWAP_CACHED_CMP "SwapCached"
 
 char* trim_leading_spaces(char *str);
 //Returns memory info from /proc/meminfo
