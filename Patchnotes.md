@@ -6,6 +6,7 @@ sysinfo.c
     Uptime:
         Changed uptime output to: Uptime: 2 days, 13 hours, 13 minutes
         Changed error handling to more readable code.
+        Fixed bug with uptime print.
     print_title:
         cleaned up code.
     print_os_type:
@@ -13,6 +14,7 @@ sysinfo.c
         Changed name to print_os_info
     get_hostname():
         Changed error handling to more readable code.
+        
 sysinfo.h
     Changed name to print_os_info
 
@@ -23,7 +25,6 @@ memory.c
     print_swap():
         Added percentage on used swap.
         Cleaned up some code.
-
 
 cpu.c
     print_cpu_model():
