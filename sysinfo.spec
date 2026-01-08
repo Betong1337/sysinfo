@@ -5,7 +5,7 @@ Summary:        Small Linux system information tool written in C
 
 License:        MIT
 URL:            https://github.com/Betong1337/sysinfo
-Source0:        Source0: https://github.com/Betong1337/sysinfo/archive/refs/tags/v%{version}.tar.gz
+Source0:        https://github.com/Betong1337/sysinfo/archive/refs/tags/v%{version}.tar.gz
 
 
 BuildRequires:  gcc, make
