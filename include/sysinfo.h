@@ -21,6 +21,7 @@ const char *get_username();
 void print_uptime();
 void print_kernel_version();
 void print_os_info();
+void print_sysinfo_version();
 char* get_hostname();
 
 #endif
