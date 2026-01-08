@@ -29,22 +29,24 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    if (strcmp(argv[1], "--cpu") == 0) {
+    if (strcmp(argv[1], CPU_ARGV_CMP) == 0) {
         print_cpu_model();
-    } else if (strcmp(argv[1], "--mem") == 0) {
+    } else if (strcmp(argv[1], MEM_ARGV_CMP) == 0) {
         print_mem_total();
-    } else if (strcmp(argv[1], "--swap") == 0) {
+    } else if (strcmp(argv[1], SWAP_ARGV_CMP) == 0) {
         print_swap();
-    } else if (strcmp(argv[1], "--all") == 0) {
+    } else if (strcmp(argv[1], ALL_ARGV_CMP) == 0) {
         print_all();
-    } else if (strcmp(argv[1], "--uptime") == 0 || strcmp(argv[1], "--up") == 0) {
+    } else if (strcmp(argv[1], UPTIME_ARGV_CMP1) == 0 || strcmp(argv[1], UPTIME_ARGV_CMP2) == 0) {
         print_uptime();
-    } else if (strcmp(argv[1], "--version" ) == 0 || strcmp(argv[1], "--ver") == 0) {
-        print_kernel_version();
-    } else if (strcmp(argv[1], "--os") == 0) {
+    } else if (strcmp(argv[1], SYSINFO_VERSION_ARGV_CMP1) == 0 || strcmp(argv[1], SYSINFO_VERSION_ARGV_CMP2) == 0) {
+        print_sysinfo_version();
+    } else if (strcmp(argv[1], OS_ARGV_CMP) == 0) {
         print_os_info();
-    } else if (strcmp(argv[1], "--help") == 0) {
+    } else if (strcmp(argv[1], HELP_ARGV_CMP) == 0) {
         printf("%s", USAGE_MSG);
+    } else if (strcmp(argv[1], KERNEL_VERSION_ARGV_CMP) == 0) {
+        print_kernel_version();
     } else {
         printf("%s", USAGE_MSG);
     }
