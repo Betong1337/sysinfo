@@ -1,3 +1,13 @@
+/******************************************************************************
+ *  main.c
+ *
+ *  Author: Betong1337 (Jakob Asp)
+ *  Created: 2026-01-02
+ *  Description: Main entry point for the project.
+ *
+ *  License: MIT License
+ *  See LICENSE.md for full license text.
+ *****************************************************************************/
 #include <main.h>
 #include <cpu.h>
 #include <memory.h>
