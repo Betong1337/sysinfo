@@ -8,12 +8,31 @@
 #include <unistd.h>
 #include <pwd.h>
 #include <math.h>
-#include <defines.h>
+#include <color.h>
 
 #define OS_PATH          "/etc/os-release"
 #define KERNEL_PATH      "/proc/version"
 #define HOSTNAME_PATH    "/proc/sys/kernel/hostname"
 #define UPTIME_PATH      "/proc/uptime"
+
+//sysinfo.c
+#define SYSINFO_VERSION "0.1"
+#define SYSINFO_VERSION_MSG "sysinfo v0.1\n"
+
+#define PRINT_TITLE_MSG "%s=== %s@%s ===%s\n"
+
+#define UPTIME_PREFIX "Uptime:"
+#define UPTIME_MSG1 "%s%s%s %d Hours, %d Minutes\n"
+#define UPTIME_MSG2 "%s%s%s %d Days, %d Hour(s), %d Minutes\n"
+#define UPTIME_MSG3 "%s%s%s %d Minutes\n"
+
+#define KERNEL_VER_PREFIX "Kernel Version: "
+#define KERNEL_MSG "%s%s%s%s\n"
+
+#define OS_PREFIX "OS: "
+#define OS_MSG "%s%s%s%s %s\n"
+#define OS_NAME_CMP "NAME"
+#define OS_VERSION_CMP "VERSION"
 
 void print_title();
 void strip_quotes(char *str);
