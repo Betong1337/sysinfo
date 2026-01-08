@@ -26,7 +26,7 @@
 #define UPTIME_MSG2 "%s%s%s %d Days, %d Hour(s), %d Minutes\n"
 #define UPTIME_MSG3 "%s%s%s %d Minutes\n"
 
-#define KERNEL_VER_PREFIX "Kernel Version: "
+#define KERNEL_VER_PREFIX "Kernel: "
 #define KERNEL_MSG "%s%s%s%s\n"
 
 #define OS_PREFIX "OS: "
