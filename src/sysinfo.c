@@ -92,6 +92,10 @@ void print_os_info() {
     fclose(f);
 }
 
+void print_sysinfo_version() {
+    printf(SYSINFO_VERSION_MSG);
+}
+
 char* get_hostname() {
     FILE *f = fopen(HOSTNAME_PATH, "r");
     if (!f) return NULL;
@@ -106,3 +110,4 @@ char* get_hostname() {
     fclose(f);
     return NULL;
 }
+
