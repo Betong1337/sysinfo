@@ -99,7 +99,7 @@ void print_os_info() {
 }
 
 void print_sysinfo_version() {
-    printf(SYSINFO_VERSION_MSG);
+    printf(SYSINFO_FORMAT, SYSINFO_VERSION_MSG, SYSINFO_VERSION);
 }
 
 char* get_hostname() {

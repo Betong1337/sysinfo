@@ -16,8 +16,9 @@
 #define UPTIME_PATH      "/proc/uptime"
 
 //sysinfo.c
-#define SYSINFO_VERSION "0.1"
-#define SYSINFO_VERSION_MSG "sysinfo v0.1\n"
+#define SYSINFO_VERSION "1.0.0"
+#define SYSINFO_VERSION_MSG "sysinfo"
+#define SYSINFO_FORMAT "%s %s\n"
 
 #define PRINT_TITLE_MSG "%s=== %s@%s ===%s\n"
 
