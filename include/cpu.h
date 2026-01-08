@@ -8,9 +8,12 @@
 #include <unistd.h>
 #include <pwd.h>
 #include <math.h>
-#include <defines.h>
+#include <color.h>
 
 #define CPUINFO_PATH     "/proc/cpuinfo"
+#define CPU_PREFIX "CPU: "
+#define CPU_MODEL_NAME "model name"
+#define CPU_MSG "%s%s%s%s"
 
 //Prints CPU model
 void print_cpu_model();
