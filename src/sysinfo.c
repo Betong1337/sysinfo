@@ -31,7 +31,7 @@ void print_uptime() {
         return;
     }
 
-    float hours = 23.232;
+    float hours = atof(strtok(line, " ")) / 3600.0;
     fclose(f);
 
     int mins = (int)((hours - (int)hours) * 60);
