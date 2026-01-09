@@ -23,7 +23,11 @@ const char *get_username() {
 
 void print_uptime() {
     FILE *f = fopen(UPTIME_PATH, "r");
-    if (!f) return;
+
+    if (!f) {
+        printf(ERROR_MSG, HEADER, UPTIME_PREFIX, RESET, UPTIME_ERROR);
+        return;
+    }
 
     char line[256];
     if (!fgets(line, sizeof line, f)) {
@@ -53,7 +57,11 @@ void print_uptime() {
 
 void print_kernel_version() {
     FILE *f = fopen(KERNEL_PATH, "r");
-    if (!f) return;
+
+    if (!f) {
+        printf(ERROR_MSG, HEADER, KERNEL_VER_PREFIX, RESET, KERNEL_ERROR);
+        return;
+    }
 
     char line[256];
     char *kernel_version = fgets(line, sizeof(line), f);
@@ -69,7 +77,11 @@ void print_kernel_version() {
 
 void print_os_info() {
     FILE *f = fopen(OS_PATH, "r");
-    if (!f) return;
+
+    if (!f) {
+        printf(ERROR_MSG, HEADER, OS_PREFIX, RESET, OS_ERROR);
+        return;
+    }
 
     char line[256];
 

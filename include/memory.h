@@ -22,6 +22,9 @@
 #define SWAP_FREE_CMP "SwapFree"
 #define SWAP_CACHED_CMP "SwapCached"
 
+#define MEM_ERROR_MSG "%s%s%s%s\n"
+#define MEM_ERROR "Error: Could not print memory..."
+
 char* trim_leading_spaces(char *str);
 //Returns memory info from /proc/meminfo
 char* get_memory_info(char *option);

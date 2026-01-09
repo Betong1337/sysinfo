@@ -31,3 +31,9 @@ cpu.c
         Changed error handling
 
 Added defines.h for compare strings, colors and print formatting
+
+Patchnotes 2026-01-09
+
+Added GPU Info
+Added Errorhandling on all print functions.
+Fixed Bug: Swap percentage bug when swap total is 0.00 it shows = (-21485757%)

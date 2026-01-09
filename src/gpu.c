@@ -5,7 +5,10 @@ void print_gpus() {
     char path[1035];
 
     fp = popen(GPU_COMMAND, "r");
-    if (!fp) return;
+    if (!fp) {
+        printf(GPU_ERROR_MSG, HEADER, GPU_PREFIX, ": ", RESET, GPU_ERROR);
+        return;
+    }
 
     const char *sep = "controller:";
     char *pos; 

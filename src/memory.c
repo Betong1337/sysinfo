@@ -60,6 +60,11 @@ void print_mem_total() {
     char *gb_total = get_memory_info(MEM_TOTAL_CMP);
     char *gb_available = get_memory_info(MEM_AVAILABLE_CMP);
 
+    if (!gb_total || !gb_available) {
+        printf(MEM_ERROR_MSG, HEADER, MEM_PREFIX, RESET, MEM_ERROR);
+        return;
+    }
+
     float total = atof(gb_total);
     float available = atof(gb_available);
 
@@ -77,6 +82,11 @@ void print_swap() {
     char *swap_total = get_memory_info(SWAP_TOTAL_CMP);
     char *swap_free = get_memory_info(SWAP_FREE_CMP);
     char *swap_cached = get_memory_info(SWAP_CACHED_CMP);
+
+    if (!swap_total || !swap_free || !swap_cached) {
+        printf(MEM_ERROR_MSG, HEADER, SWAP_PREFIX, RESET, MEM_ERROR);
+        return;
+    }
 
     float swap_total_f = atof(swap_total);
     float swap_free_f = atof(swap_free);

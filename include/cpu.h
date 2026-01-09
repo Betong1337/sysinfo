@@ -14,6 +14,8 @@
 #define CPU_PREFIX "CPU: "
 #define CPU_MODEL_NAME "model name"
 #define CPU_MSG "%s%s%s%s"
+#define CPU_ERROR_MSG "%s%s%s%s\n"
+#define CPU_ERROR "Error: Could not print CPU..."
 
 //Prints CPU model
 void print_cpu_model();

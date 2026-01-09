@@ -2,7 +2,10 @@
 
 void print_cpu_model() {
     FILE *f = fopen(CPUINFO_PATH, "r");
-    if (!f) return;
+    if (!f) {
+        printf(CPU_ERROR_MSG, HEADER, CPU_PREFIX, RESET, CPU_ERROR);
+        return;
+    }
 
     char line[256];
 
