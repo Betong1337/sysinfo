@@ -54,6 +54,7 @@ sysinfo
 .vscode/
 PKGBUILD
 pkg/
+DEBIAN/
 
 # debug information files
 *.dwo
