@@ -10,8 +10,7 @@
 #include <color.h>
 
 #define GPU_COMMAND "/bin/lspci | grep -iE 'VGA|3D|video'"
-#define GPU_PREFIX "GPU:"
-#define GPU_MSG "%s%s%s%s"
+#define GPU_MSG "%s%s%d%s%s%s"
 
 void print_gpus();
 

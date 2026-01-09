@@ -8,13 +8,16 @@ void print_gpus() {
     if (!fp) return;
 
     const char *sep = "controller:";
-    char *pos;
+    char *pos; 
+
+    int gpu_count = 1;
 
     while (fgets(path, sizeof(path), fp) != NULL) {
         pos = strstr(path, sep);
         char *first = path;
         char *GPU = pos + strlen(sep);
-        printf(GPU_MSG, HEADER, "GPU:", RESET, GPU);
+        printf(GPU_MSG, HEADER, "GPU ", gpu_count,":", RESET, GPU);
+        gpu_count++;
     }
 
     pclose(fp);
