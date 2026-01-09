@@ -6,11 +6,12 @@
 
 The program can display:
 
-- **CPU information**  
+- **CPU information**
+- **GPU information**
 - **Memory (RAM and swap)**  
 - **System uptime**  
 - **Hostname**  
-- **Kernel and OS version**  
+- **Kernel and OS version**
 
 ## Screenshot
 
@@ -34,11 +35,12 @@ After compiling, run the program with:
 
 ## Usage
 
-    Usage: ./sysinfo [--cpu | --mem | --all | --uptime | --version | --help]
+    Usage: ./sysinfo [--cpu | --gpu | --mem | --all | --uptime | --version | --help]
 
 ### Options
 
-- `--cpu`      : **Display CPU informatio**  
+- `--cpu`      : **Display CPU information**
+- `--gpu`      : **Display GPU information** 
 - `--mem`      : **Display memory (RAM)**
 - `--swap`     : **Display swap**
 - `--all`      : **Display all available system information**  

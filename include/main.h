@@ -13,7 +13,7 @@
 #include <sysinfo.h>
 #include <gpu.h>
 
-#define USAGE_MSG "Usage: [--cpu | --mem | --swap | --all | --uptime | --version | --help]\n"
+#define USAGE_MSG "Usage: [--cpu | --gpu | --mem | --swap | --all | --uptime | --version | --help]\n"
 
 #define CPU_ARGV_CMP "--cpu"
 #define MEM_ARGV_CMP "--mem"
