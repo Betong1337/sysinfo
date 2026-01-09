@@ -1,5 +1,5 @@
 Name:           sysinfo
-Version:        1.0.3
+Version:        1.0.4
 Release:        1%{?dist}
 Summary:        Small Linux system information tool written in C
 
