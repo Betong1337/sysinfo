@@ -7,6 +7,12 @@
 #include <unistd.h>
 #include <pwd.h>
 #include <math.h>
+
+#include <cpu.h>
+#include <memory.h>
+#include <sysinfo.h>
+#include <gpu.h>
+
 #define USAGE_MSG "Usage: [--cpu | --mem | --swap | --all | --uptime | --version | --help]\n"
 
 #define CPU_ARGV_CMP "--cpu"
@@ -20,6 +26,7 @@
 #define OS_ARGV_CMP "--os"
 #define HELP_ARGV_CMP "--help"
 #define KERNEL_VERSION_ARGV_CMP "--kernel-version"
+#define GPU_ARGV_CMP "--gpu"
 
 void print_all();
 #endif
