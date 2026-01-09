@@ -33,6 +33,26 @@ After compiling, run the program with:
 
     ./sysinfo [option] or ./sysinfo
 
+## Installation
+
+This project is currently available on fedora v43 copr, install instructions below.
+
+Step 1.
+
+    sudo dnf upgrade
+
+Step 2.
+
+    dnf copr enable betong/sysinfo
+
+Step 3.
+
+    sudo dnf install sysinfo
+
+Step 4.
+
+    sysinfo
+
 ## Usage
 
     Usage: ./sysinfo [--cpu | --gpu | --mem | --all | --uptime | --version | --help]
