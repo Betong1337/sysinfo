@@ -15,7 +15,7 @@ void print_gpus() {
     while (fgets(path, sizeof(path), fp) != NULL) {
         pos = strstr(path, sep);
         char *GPU = pos + strlen(sep);
-        printf(GPU_MSG, HEADER, "GPU ", gpu_count,":", RESET, GPU);
+        printf(GPU_MSG, HEADER, GPU_PREFIX, gpu_count,":", RESET, GPU);
         gpu_count++;
     }
 

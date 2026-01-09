@@ -11,6 +11,7 @@
 
 #define GPU_COMMAND "/bin/lspci | grep -iE 'VGA|3D|video'"
 #define GPU_MSG "%s%s%d%s%s%s"
+#define GPU_PREFIX "GPU"
 
 void print_gpus();
 
