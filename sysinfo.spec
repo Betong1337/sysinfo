@@ -1,5 +1,5 @@
 Name:           sysinfo
-Version:        1.0.4
+Version:        1.0.5
 Release:        1%{?dist}
 Summary:        Small Linux system information tool written in C
 
@@ -29,5 +29,5 @@ cp sysinfo %{buildroot}/usr/bin/
 /usr/bin/sysinfo
 
 %changelog
-* Thu Jan 08 2026 Ditt Namn asp.jakob@outlook.com - 1.0.4-1
+* Thu Jan 08 2026 Ditt Namn asp.jakob@outlook.com - 1.0.5-1
 - Updated spec for COPR, removed empty Requires
