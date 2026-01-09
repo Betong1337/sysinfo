@@ -86,7 +86,14 @@ void print_swap() {
     free(swap_cached);
 
     float swap_used = swap_total_f - swap_free_f - swap_cached_f;
-    int used_percent = (swap_used / swap_total_f) * 100;
+    int used_percent;
+
+    if (swap_total_f == 0 || swap_total_f < 0) {
+        used_percent = 0.00;
+    } else {
+        used_percent = (swap_used / swap_total_f) * 100;
+    }
+
     char *procent_color = get_percentage_color(used_percent);
 
     printf(MEM_MSG, HEADER, SWAP_PREFIX, RESET, swap_used, swap_total_f, procent_color, used_percent, RESET);

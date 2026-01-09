@@ -4,6 +4,7 @@
 Memory:
     **Add how much ram used.
     **Add Swap in GB.
+    **Swap percentage bug when swap total is 0.00 it shows = (-21485757%)
 
 OS:
     **Add version of OS
@@ -11,4 +12,4 @@ OS:
 UPTIME:
     **Change the output to like this: 2 days, 13 hours, 31 mins
 
-Add GPU info.
+**Add GPU info.
